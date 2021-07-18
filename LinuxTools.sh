@@ -324,6 +324,14 @@ echo -e "\033[1;32m  [+]\033[0m php7.4 OK!"
 echo ""
 
 echo ""
+echo -e "\033[1;32m  [+]\033[0m Baixando openjdk-16-jdk"
+echo ""
+sudo apt-get install openjdk-16-jdk -y
+echo ""
+echo -e "\033[1;32m  [+]\033[0m openjdk-16-jdk OK!"
+echo ""
+
+echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando golang "
 echo ""
 wget https://golang.org/dl/go1.16.4.linux-amd64.tar.gz
@@ -520,6 +528,73 @@ cp crackmapexec $tools/Tools/bin
 rm -rf cme-ubuntu-latest.4.zip crackmapexec
 echo ""
 echo -e "\033[1;32m  [+]\033[0m crackmapexec OK!"
+echo ""
+
+echo ""
+echo -e "\033[1;32m  [+]\033[0m Baixando apktool"
+echo ""
+wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool
+wget https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.5.0.jar
+mv apktool_2.5.0.jar apktool.jar
+chmod +x apktool.jar apktool
+cp apktool.jar $tools/Tools/bin
+cp apktool $tools/Tools/bin
+rm apktool.jar apktool
+echo ""
+echo -e "\033[1;32m  [+]\033[0m apktool OK!"
+echo ""
+
+echo ""
+echo -e "\033[1;32m  [+]\033[0m Baixando dex-tools"
+echo ""
+wget https://github.com/pxb1988/dex2jar/releases/download/2.0/dex-tools-2.0.zip
+unzip dex-tools-2.0.zip -d $tools/Tools/
+chmod -R +x $tools/Tools/dex2jar-2.0/*.sh
+rm dex-tools-2.0.zip
+echo ""
+echo -e "\033[1;32m  [+]\033[0m dex-tools OK!"
+echo ""
+
+echo ""
+echo -e "\033[1;32m  [+]\033[0m Baixando jadx"
+echo ""
+wget https://github.com/skylot/jadx/releases/download/v1.2.0/jadx-1.2.0.zip
+unzip jadx-1.2.0.zip -d $tools/Tools/jadx
+rm jadx-1.2.0.zip
+echo ""
+echo -e "\033[1;32m  [+]\033[0m jadx OK!"
+echo ""
+
+echo ""
+echo -e "\033[1;32m  [+]\033[0m Baixando Insomnia"
+echo ""
+wget https://github.com/Kong/insomnia/releases/download/core%402021.4.1/Insomnia.Core-2021.4.1.deb
+sudo dpkg -i Insomnia.Core-2021.4.1.deb
+rm Insomnia.Core-2021.4.1.deb
+echo ""
+echo -e "\033[1;32m  [+]\033[0m Insomnia OK!"
+echo ""
+
+echo ""
+echo -e "\033[1;32m  [+]\033[0m Baixando jd-gui"
+echo ""
+wget https://github.com/java-decompiler/jd-gui/releases/download/v1.6.6/jd-gui-1.6.6.deb
+sudo dpkg -i jd-gui-1.6.6.deb
+rm jd-gui-1.6.6.deb
+echo ""
+echo -e "\033[1;32m  [+]\033[0m jd-gui OK!"
+echo ""
+
+echo ""
+echo -e "\033[1;32m  [+]\033[0m Baixando baksmali"
+echo ""
+wget https://bitbucket.org/JesusFreke/smali/downloads/baksmali-2.5.2.jar
+chmod +x baksmali-2.5.2.jar
+mv baksmali-2.5.2.jar baksmali.jar
+cp baksmali.jar $tools/Tools/bin
+rm baksmali.jar
+echo ""
+echo -e "\033[1;32m  [+]\033[0m baksmali OK!"
 echo ""
 
 echo ""
@@ -761,6 +836,8 @@ echo ""
 echo -e "\033[1;31m  [-]\033[0m Adicionar $HOME/$tools/Tools/bin em /etc/environment"
 echo -e "\033[1;31m  [-]\033[0m Adicionar $HOME/$tools/Tools/pathGO/bin em /etc/environment"
 echo -e "\033[1;31m  [-]\033[0m Adicionar $HOME/$tools/Tools/pathGOInstall/bin em /etc/environment"
+echo -e "\033[1;31m  [-]\033[0m Adicionar $HOME/$tools/Tools/dex2jar-2.0 em /etc/environment"
+echo -e "\033[1;31m  [-]\033[0m Adicionar $HOME/$tools/Tools/jadx/bin em /etc/environment"
 echo ""
 echo -e "\033[1;31m  [-]\033[0m Configurar $HOME/.config/nuclei/config.yaml"
 echo -e "\033[1;31m  [-]\033[0m Configurar $HOME/.config/notify/notify.conf"
