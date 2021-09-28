@@ -332,6 +332,14 @@ echo -e "\033[1;32m  [+]\033[0m pip3 OK!"
 echo ""
 
 echo ""
+echo -e "\033[1;32m  [+]\033[0m Baixando macchanger "
+echo ""
+sudo apt-get install macchanger -y
+echo ""
+echo -e "\033[1;32m  [+]\033[0m macchanger OK!"
+echo ""
+
+echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando python2 && pip2 "
 echo ""
 sudo apt-get install python2 -y
