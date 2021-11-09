@@ -593,8 +593,8 @@ echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando apktool"
 echo ""
 wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool
-wget https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.5.0.jar
-mv apktool_2.5.0.jar apktool.jar
+wget https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.6.0.jar
+mv apktool_2.6.0.jar apktool.jar
 chmod +x apktool.jar apktool
 cp apktool.jar $tools/Tools/bin
 cp apktool $tools/Tools/bin
@@ -671,23 +671,23 @@ echo ""
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando subfinder"
 echo ""
-GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 echo ""
 echo -e "\033[1;32m  [+]\033[0m subfinder OK!"
 echo ""
 
 echo ""
-echo -e "\033[1;32m  [+]\033[0m Baixando dnsx "
+echo -e "\033[1;32m  [+]\033[0m Baixando dnsx"
 echo ""
-GO111MODULE=on go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
+go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
 echo ""
 echo -e "\033[1;32m  [+]\033[0m dnsx OK!"
 echo ""
 
 echo ""
-echo -e "\033[1;32m  [+]\033[0m Baixando httpx "
+echo -e "\033[1;32m  [+]\033[0m Baixando httpx"
 echo ""
-GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 echo ""
 echo -e "\033[1;32m  [+]\033[0m httpx OK!"
 echo ""
@@ -696,15 +696,15 @@ echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando naabu "
 echo ""
 sudo apt-get install libpcap-dev -y
-GO111MODULE=on go get -v github.com/projectdiscovery/naabu/v2/cmd/naabu
+go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 echo ""
 echo -e "\033[1;32m  [+]\033[0m naabu OK!"
 echo ""
 
 echo ""
-echo -e "\033[1;32m  [+]\033[0m Baixando nuclei "
+echo -e "\033[1;32m  [+]\033[0m Baixando nuclei"
 echo ""
-GO111MODULE=on go get -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 echo ""
 echo -e "\033[1;32m  [+]\033[0m nuclei OK!"
 echo ""
@@ -791,7 +791,7 @@ echo ""
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando gitleaks "
 echo ""
-wget https://github.com/zricethezav/gitleaks/releases/download/v7.3.0/gitleaks-linux-amd64
+wget https://github.com/zricethezav/gitleaks/releases/download/v7.6.1/gitleaks-linux-amd64
 mv gitleaks-linux-amd64 gitleaks
 chmod +x gitleaks
 cp gitleaks $tools/Tools/bin
@@ -803,7 +803,7 @@ echo ""
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando amass "
 echo ""
-wget https://github.com/OWASP/Amass/releases/download/v3.12.3/amass_linux_amd64.zip
+wget https://github.com/OWASP/Amass/releases/download/v3.14.3/amass_linux_amd64.zip
 unzip amass_linux_amd64.zip
 cp amass_linux_amd64/amass $tools/Tools/bin
 rm -rf amass_linux_amd64 amass_linux_amd64.zip
@@ -814,10 +814,10 @@ echo ""
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando gau"
 echo ""
-wget https://github.com/lc/gau/releases/download/v1.1.0/gau_1.1.0_linux_amd64.tar.gz
-tar -vzxf gau_1.1.0_linux_amd64.tar.gz
+wget https://github.com/lc/gau/releases/download/v1.2.0/gau_1.2.0_linux_amd64.tar.gz
+tar -vzxf gau_1.2.0_linux_amd64.tar.gz
 cp gau $tools/Tools/bin
-rm gau LICENSE README.md gau_1.1.0_linux_amd64.tar.gz
+rm gau LICENSE README.md gau_1.2.0_linux_amd64.tar.gz
 echo ""
 echo -e "\033[1;32m  [+]\033[0m gau OK!"
 echo ""
@@ -873,7 +873,7 @@ echo ""
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando findomain"
 echo ""
-wget https://github.com/Findomain/Findomain/releases/download/4.1.1/findomain-linux
+wget https://github.com/Findomain/Findomain/releases/download/5.0.0/findomain-linux
 mv findomain-linux findomain
 chmod +x findomain
 cp findomain $tools/Tools/bin
@@ -893,7 +893,7 @@ echo ""
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando Interactsh"
 echo ""
-GO111MODULE=on go get -v github.com/projectdiscovery/interactsh/cmd/interactsh-client
+go install -v github.com/projectdiscovery/interactsh/cmd/interactsh-client@latest
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Interactsh OK!"
 echo ""
