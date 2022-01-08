@@ -579,8 +579,8 @@ echo ""
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando crackmapexec "
 echo ""
-wget https://github.com/byt3bl33d3r/CrackMapExec/releases/download/v5.1.1dev/cme-ubuntu-latest.4.zip
-unzip cme-ubuntu-latest.4.zip
+wget https://github.com/byt3bl33d3r/CrackMapExec/releases/download/v5.1.7dev/cme-ubuntu-latest.zip
+unzip cme-ubuntu-latest.zip
 mv cme crackmapexec
 chmod +x crackmapexec
 cp crackmapexec $tools/Tools/bin
@@ -606,10 +606,10 @@ echo ""
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando dex-tools"
 echo ""
-wget https://github.com/pxb1988/dex2jar/releases/download/2.0/dex-tools-2.0.zip
-unzip dex-tools-2.0.zip -d $tools/Tools/
-chmod -R +x $tools/Tools/dex2jar-2.0/*.sh
-rm dex-tools-2.0.zip
+wget https://github.com/pxb1988/dex2jar/releases/download/v2.1/dex2jar-2.1.zip
+unzip dex2jar-2.1.zip -d $tools/Tools/
+chmod -R +x $tools/Tools/dex-tools-2.1/*.sh
+rm dex2jar-2.1.zip
 echo ""
 echo -e "\033[1;32m  [+]\033[0m dex-tools OK!"
 echo ""
@@ -617,11 +617,11 @@ echo ""
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando jadx"
 echo ""
-wget https://github.com/skylot/jadx/releases/download/v1.2.0/jadx-1.2.0.zip
-unzip jadx-1.2.0.zip -d $tools/Tools/jadx
+wget https://github.com/skylot/jadx/releases/download/v1.3.1/jadx-1.3.1.zip
+unzip jadx-1.3.1.zip -d $tools/Tools/jadx
 ln -s $HOME/$tools/Tools/jadx/bin/jadx $tools/Tools/bin
 ln -s $HOME/$tools/Tools/jadx/bin/jadx-gui $tools/Tools/bin
-rm jadx-1.2.0.zip
+rm jadx-1.3.1.zip
 echo ""
 echo -e "\033[1;32m  [+]\033[0m jadx OK!"
 echo ""
@@ -639,9 +639,9 @@ echo ""
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando Insomnia"
 echo ""
-wget https://github.com/Kong/insomnia/releases/download/core%402021.4.1/Insomnia.Core-2021.4.1.deb
-sudo dpkg -i Insomnia.Core-2021.4.1.deb
-rm Insomnia.Core-2021.4.1.deb
+wget https://github.com/Kong/insomnia/releases/download/core%402021.7.2/Insomnia.Core-2021.7.2.deb
+sudo dpkg -i Insomnia.Core-2021.7.2.deb
+rm Insomnia.Core-2021.7.2.deb
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Insomnia OK!"
 echo ""
@@ -679,7 +679,7 @@ echo ""
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando dnsx"
 echo ""
-go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
+go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
 echo ""
 echo -e "\033[1;32m  [+]\033[0m dnsx OK!"
 echo ""
@@ -781,7 +781,7 @@ echo ""
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando mimikatz"
 echo ""
-wget https://github.com/gentilkiwi/mimikatz/releases/download/2.2.0-20200918-fix/mimikatz_trunk.zip
+wget https://github.com/gentilkiwi/mimikatz/releases/download/2.2.0-20210810-2/mimikatz_trunk.zip
 unzip mimikatz_trunk.zip -d $tools/Tools/mimikatz
 rm mimikatz_trunk.zip
 echo ""
@@ -803,7 +803,7 @@ echo ""
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando amass "
 echo ""
-wget https://github.com/OWASP/Amass/releases/download/v3.14.3/amass_linux_amd64.zip
+wget https://github.com/OWASP/Amass/releases/download/v3.15.2/amass_linux_amd64.zip
 unzip amass_linux_amd64.zip
 cp amass_linux_amd64/amass $tools/Tools/bin
 rm -rf amass_linux_amd64 amass_linux_amd64.zip
@@ -814,10 +814,10 @@ echo ""
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando gau"
 echo ""
-wget https://github.com/lc/gau/releases/download/v1.2.0/gau_1.2.0_linux_amd64.tar.gz
-tar -vzxf gau_1.2.0_linux_amd64.tar.gz
+wget https://github.com/lc/gau/releases/download/v2.0.6/gau_2.0.6_linux_amd64.tar.gz
+tar -vzxf gau_2.0.6_linux_amd64.tar.gz
 cp gau $tools/Tools/bin
-rm gau LICENSE README.md gau_1.2.0_linux_amd64.tar.gz
+rm gau LICENSE README.md gau_2.0.6_linux_amd64.tar.gz
 echo ""
 echo -e "\033[1;32m  [+]\033[0m gau OK!"
 echo ""
@@ -873,7 +873,7 @@ echo ""
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando findomain"
 echo ""
-wget https://github.com/Findomain/Findomain/releases/download/5.0.0/findomain-linux
+wget https://github.com/Findomain/Findomain/releases/download/5.1.1/findomain-linux
 mv findomain-linux findomain
 chmod +x findomain
 cp findomain $tools/Tools/bin
@@ -885,7 +885,7 @@ echo ""
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando Notify"
 echo ""
-GO111MODULE=on go get -v github.com/projectdiscovery/notify/cmd/notify
+go install -v github.com/projectdiscovery/notify/cmd/notify@latest
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Notify OK!"
 echo ""
