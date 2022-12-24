@@ -394,7 +394,7 @@ echo ""
 echo ""
 echo -e "\033[1;32m  [+]\033[0m Baixando golang "
 echo ""
-wget https://golang.org/dl/go1.16.4.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.19.4.linux-amd64.tar.gz
 tar -vzxf go1.16.4.linux-amd64.tar.gz
 mv go pathGOInstall
 cp -r pathGOInstall/ $tools/Tools
